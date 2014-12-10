@@ -1,0 +1,157 @@
+
+/* ----- styles généraux ----- */
+a, 
+input:focus, 
+textarea:focus,
+div:focus,
+object:focus,
+area:focus {
+  outline:none;
+}
+
+ul {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+i.icn {
+  font-style: normal;
+}
+
+
+
+.glyphs {
+  font-family: $glyphs;
+  font-size: 20px;
+}
+
+
+/* ----- header / footer ----- */
+header,
+footer {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  z-index:9;
+  display:block;
+}
+
+header {    
+  top: 35px;
+  .cont {
+    display: inline-block;
+  }
+}
+
+footer {
+  bottom: 0px;
+  margin-top: -25px;
+  height: 40px;
+  
+  font-family: $bold-fnt;
+  font-size: 14px;
+  color: $red;
+  
+}
+
+/* ----- navigation ----- */
+/*
+.nav-cursor {
+  width: 11px;
+  height: 10px;
+  &:after {
+    content: '\F100';
+  }
+}
+*/
+.logo {
+//  @extend .sprite-logo;
+  width: 241px;
+  height: 60px;
+  padding-top: 27px;
+  display: inline-block;
+  margin-right: 30px;
+  
+  font-family: $dsn-fnt;
+  font-size: 85px;
+  
+  a {  
+    text-decoration: none;
+    color: $red;
+  }
+}
+
+.icn-logo:after {
+  content: "\F107";
+}
+#mainnav {
+  li {
+ //   .nav-cursor {
+ //     display: none;
+ //   }
+ //   &.active .nav-cursor {
+ //     display: inline-block !important;
+ //   }
+      &.active a:after {
+        font-family: $dsn-fnt;
+        content: '\F100';
+        font-size: 18px;
+      }
+  }
+}
+
+.nav {
+  a {
+    padding-top: 24px;
+    line-height: 1.1rem;
+    
+    font-family: $dsn-fnt;
+    font-size: 24px;
+    color: $red;
+    
+    text-decoration: none;
+    text-transform:uppercase;
+    
+  }
+  ul {
+    margin: 0 0 0 30px;
+    li {
+        text-align: center;
+      +li {
+        margin-left: 50px;
+      }
+    }
+  }
+}
+
+
+/* ----- WORK ----- */
+
+.fp-controlArrow {
+  border: none;
+  
+  font-family: $dsn-fnt;
+  font-size: 16.5rem;
+  color: $red;
+  margin-top: 0;
+
+  &.fp-prev {
+    left: 20px;
+    &:after {
+      content: "\F105";
+    }
+  }
+  &.fp-next {
+    right: 120px;
+    &:after {
+      content: "\F106";
+    }
+  }
+}
+
+
+
+
+.volet {
+  
+}

@@ -1,0 +1,9 @@
+/* ------------- SPRITES ------------- */
+
+@import "compass/css3";
+
+// creation d'un sprite pour les icones
+@import "sprite/*.png";
+@include all-sprite-sprites;
+
+/* ----------- end sprites ----------- */

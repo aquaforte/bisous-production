@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg>
+<metadata>
+Created by FontForge 20110222 at Thu Oct 23 14:55:35 2014
+ By deploy user
+Copyright (c) 2014 by Aqua Forte. All rights reserved.
+</metadata>
+<defs>
+<font id="BisousGlyphs" horiz-adv-x="890" >
+  <font-face 
+    font-family="BisousGlyphs"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="1000"
+    panose-1="0 0 0 0 0 0 0 0 0 0"
+    ascent="750"
+    descent="-250"
+    bbox="0 -1 2834 701"
+    underline-thickness="50"
+    underline-position="-50"
+    unicode-range="U+003E-F107"
+  />
+<missing-glyph horiz-adv-x="500" 
+ />
+    <glyph glyph-name=".notdef" horiz-adv-x="500" 
+ />
+    <glyph glyph-name="uniF101" unicode="&#xf101;" horiz-adv-x="605" 
+d="M0 700l605 -348l-605 -352v700z" />
+    <glyph glyph-name="uniF102" unicode="&#xf102;" 
+d="M0 0l445 500l445 -500h-890zM315 187h118v-119h24v119h118v24h-118v118h-24v-118h-118v-24z" />
+    <glyph glyph-name="uniF103" unicode="&#xf103;" 
+d="M0 500h890l-445 -500zM315 289h118v-118h24v118h118v24h-118v119h-24v-119h-118v-24z" />
+    <glyph glyph-name="uniF104" unicode="&#xf104;" horiz-adv-x="1404" 
+d="M0 700q0 -1 27.5 -1t76.5 -0.5t115.5 -0.5h144.5h164h174q309 0 702 2l-697 -700q-198 196 -354 351q-66 66 -129.5 129t-113 112t-80 79t-30.5 29zM550 587h-26l166 -167l-166 -166h26l154 152l154 -152h26l-167 166l167 167h-26l-154 -154z" />
+    <glyph glyph-name="uniF105" unicode="&#xf105;" horiz-adv-x="356" 
+d="M0 350l350 350h6l-350 -350l350 -350h-6z" />
+    <glyph glyph-name="greater" unicode="&#x3e;" horiz-adv-x="833" 
+ />
+    <glyph glyph-name="uniF106" unicode="&#xf106;" horiz-adv-x="356" 
+d="M6 0h-6l350 350l-350 350h6l350 -350z" />
+    <glyph glyph-name="uniF100" unicode="&#xf100;" horiz-adv-x="578" 
+d="M578 500l-288 -500l-290 500h578z" />
+    <glyph glyph-name="uniF107" unicode="&#xf107;" horiz-adv-x="2834" 
+d="M0 93v607h408q14 0 29.5 -6.5t29.5 -20.5q15 -14 20 -28.5t5 -28.5v-133q0 -23 -7 -37.5t-21 -25.5q-29 -23 -56 -23q28 0 56 -26q9 -8 18.5 -23t9.5 -36v-219h-492zM228 379v-124h37v124h-37zM228 540v-57h37v57h-37zM749 -1h-219v446h219v-446zM1828 700h229v-445h37
+v445h220v-607l-486 2v605zM785 93v190h229v-28h37v57h-179q-16 0 -34.5 6.5t-29.5 17.5q-14 16 -18.5 31.5t-4.5 29.5v303h408q29 0 58 -28q14 -14 16.5 -28t2.5 -28v-105h-219v29h-37v-57h179q15 0 28.5 -6t29.5 -20q14 -12 16.5 -28.5t2.5 -31.5v-217v-87h-485zM2350 283
+h218v-28h48v57h-190q-14 0 -27 8t-23 19q-14 15 -19.5 29.5t-5.5 28.5v219q0 14 4 29t18 31q11 12 25 18t28 6h408v-189h-218v29h-48v-57h190q15 0 31 -7t27 -21q11 -13 14.5 -28t3.5 -30v-304h-484v190zM1716 700q29 0 56 -28q11 -11 15 -26.5t4 -29.5v-436
+q0 -15 -3.5 -31.5t-15.5 -30.5q-14 -16 -28 -20.5t-28 -4.5h-323q-21 0 -35.5 7.5t-24.5 20.5q-24 31 -24 59l2 520h405zM1573 540h-39v-285h39v285zM527 591q0 23 8.5 43t23.5 35t35 23.5t43 8.5t43 -8.5t35 -23.5t23.5 -35t8.5 -43t-8.5 -43t-23.5 -35t-35 -23.5t-43 -8.5
+t-43 8.5t-35 23.5t-23.5 35t-8.5 43z" />
+  </font>
+</defs></svg>

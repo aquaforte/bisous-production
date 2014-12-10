@@ -1,0 +1,22 @@
+@import "compass/css3/font-face";
+
+@include font-face("GothamBold", font-files("GothamBold.woff","woff", 
+                                            "GothamBold.ttf","truetype",
+                                            "GothamBold.svg#GothamBold","svg"),
+                                            "GothamBold.eot");
+                                            
+@include font-face("gillsans-regular", font-files("gillsans-regular.woff","woff", 
+                                                  "gillsans-regular.ttf","truetype",
+                                                  "gillsans-regular.svg#gillsans-regular","svg"),
+                                                  "gillsans-regular.eot");
+                                                  
+@include font-face("gillsans-bold", font-files("gillsans-bold.woff","woff", 
+                                              "gillsans-bold.ttf","truetype",
+                                              "gillsans-bold.svg#gillsans-bold","svg"),
+                                              "gillsans-bold.eot");
+                                                  
+@include font-face("BisousGlyphs", font-files("BisousGlyphs.woff","woff", 
+                                              "BisousGlyphs.ttf","truetype",
+                                              "BisousGlyphs.svg#BisousGlyphs","svg"),
+                                              "BisousGlyphs.eot");
+                                              
