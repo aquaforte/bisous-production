@@ -8367,12 +8367,12 @@ th.hide-for-touch {
   background-repeat: no-repeat;
 }
 
-/* line 84, ../../../../../Applications/Prepros.app/Contents/Resources/app.nw/gems/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0/stylesheets/compass/utilities/sprites/_base.scss */
 .sprite-logo {
   background-position: 0 0;
 }
 
-/* line 84, ../../../../../Applications/Prepros.app/Contents/Resources/app.nw/gems/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0/stylesheets/compass/utilities/sprites/_base.scss */
 .sprite-trianglenav {
   background-position: 0 -60px;
 }
@@ -8538,4 +8538,113 @@ footer {
 /* line 146, ../scss/partials/_layout.scss */
 .fp-controlArrow.fp-next:after {
   content: "\F106";
+}
+
+/* line 5, ../scss/partials/_work.scss */
+.section.work ul {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+/* line 10, ../scss/partials/_work.scss */
+.section.work .tint {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  background-blend-mode: multiply;
+  background-color: white;
+}
+/* line 18, ../scss/partials/_work.scss */
+.section.work .tint .overcont {
+  position: absolute;
+  top: 0px;
+  display: none;
+  height: 100%;
+  width: 150%;
+}
+/* line 26, ../scss/partials/_work.scss */
+.section.work .tint .strut {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+/* line 33, ../scss/partials/_work.scss */
+.section.work .tint .chev {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+/* line 40, ../scss/partials/_work.scss */
+.section.work .tint .chev:before {
+  font-family: "GothamBold";
+  color: white;
+  content: "\F101";
+  font-size: 3.5rem;
+}
+@media medium-up {
+  /* line 40, ../scss/partials/_work.scss */
+  .section.work .tint .chev:before {
+    font-size: 4rem;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 40, ../scss/partials/_work.scss */
+  .section.work .tint .chev:before {
+    font-size: 6.2rem;
+  }
+}
+@media only screen and (min-width: 90.063em) {
+  /* line 40, ../scss/partials/_work.scss */
+  .section.work .tint .chev:before {
+    font-size: 8rem;
+  }
+}
+/* line 58, ../scss/partials/_work.scss */
+.section.work .tint .nom {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  color: white;
+  font-family: "gillsans-bold";
+  font-size: 2rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+}
+@media medium-up {
+  /* line 58, ../scss/partials/_work.scss */
+  .section.work .tint .nom {
+    font-size: 2rem;
+    line-height: 1.5rem;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 58, ../scss/partials/_work.scss */
+  .section.work .tint .nom {
+    font-size: 3rem;
+    line-height: 2.3rem;
+  }
+}
+@media only screen and (min-width: 90.063em) {
+  /* line 58, ../scss/partials/_work.scss */
+  .section.work .tint .nom {
+    font-size: 3.2rem;
+    line-height: 2.4rem;
+  }
+}
+/* line 97, ../scss/partials/_work.scss */
+.section.work .tint:hover {
+  background-color: #ff4848;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+/* line 100, ../scss/partials/_work.scss */
+.section.work .tint:hover .overcont {
+  display: block;
+}
+/* line 107, ../scss/partials/_work.scss */
+.section.work .volet {
+  background-color: #ff00ff;
+  display: none;
 }
