@@ -1,0 +1,111 @@
+@import "compass/css3/transition";
+
+.section.work {
+  
+  ul {
+      margin-left: 0px;
+      margin-right: 0px;
+  }
+    
+  .tint {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    
+    background-blend-mode: multiply;
+    background-color: white;
+    
+    .overcont {
+      position: absolute;
+      top: 0px;
+      display: none;
+      height: 100%;
+      width: 150%;
+    }
+    
+    .strut {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
+    
+    .chev {
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+ //     top: 50%;
+ //     line-height: 1rem;
+      
+      &:before {
+        font-family: $dsn-fnt;
+        color: white;
+        content: "\F101";
+        
+        font-size: 3.5rem;
+        @media #{medium-up} {
+          font-size: 4rem;
+        }
+        @media #{$large-up} {
+          font-size: 6.2rem;
+        }
+        @media #{$xlarge-up} {
+          font-size: 8rem;
+        }
+      }
+    }
+    
+    .nom {
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+ //     top: 50%;
+      
+      color: white;
+      font-family: $bold-fnt;
+      
+      font-size: 2rem;
+      line-height: 1.5rem;
+ //     margin-top: -16px;
+ //     margin-left: 42px;
+      
+      @media #{medium-up} {
+        font-size: 2rem;
+        line-height: 1.5rem;
+ //       margin-top: -16px;
+ //       margin-left: 45px;
+      }
+      
+      @media #{$large-up} {
+        font-size: 3rem;
+        line-height: 2.3rem;
+ //       margin-top: -32px;
+ //       margin-left: 70px;
+      }
+      
+      @media #{$xlarge-up} {
+        font-size: 3.2rem;
+        line-height: 2.4rem;
+  //      margin-top: -27px;
+  //      margin-left: 90px;
+      }
+      
+      text-transform: uppercase;
+      
+    }
+    
+    &:hover {
+      background-color: $red;
+      @include transition(all .3s linear);
+      .overcont {
+        display: block;
+      }
+    }
+  }
+  
+  
+  .volet {
+    background-color: #ff00ff;
+    display: none;
+  }
+}
