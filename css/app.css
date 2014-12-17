@@ -8361,9 +8361,9 @@ th.hide-for-touch {
   src: url('../fonts/BisousGlyphs.eot?&1414068936#iefix') format('embedded-opentype'), url('../fonts/BisousGlyphs.woff?1414068936') format('woff'), url('../fonts/BisousGlyphs.ttf?1414068934') format('truetype'), url('../fonts/BisousGlyphs.svg?1414068936#BisousGlyphs') format('svg');
 }
 /* ------------- SPRITES ------------- */
-/* line 56, sprite/*.png */
-.sprite-sprite, .sprite-logo, .sprite-trianglenav {
-  background-image: url('../img/sprite-se03f7bd616.png');
+/* line 72, sprite/*.png */
+.sprite-sprite, .sprite-logo, .sprite-mtycv-btm, .section.work .cvbtm, .sprite-mtycv-top, .section.work .cvtop, .sprite-trianglenav {
+  background-image: url('../img/sprite-sabbb9b1021.png');
   background-repeat: no-repeat;
 }
 
@@ -8373,8 +8373,18 @@ th.hide-for-touch {
 }
 
 /* line 84, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-trianglenav {
+.sprite-mtycv-btm, .section.work .cvbtm {
   background-position: 0 -60px;
+}
+
+/* line 84, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-mtycv-top, .section.work .cvtop {
+  background-position: 0 -90px;
+}
+
+/* line 84, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.0/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-trianglenav {
+  background-position: 0 -120px;
 }
 
 /* ----------- end sprites ----------- */
@@ -8481,17 +8491,24 @@ footer {
 
 /* line 84, ../scss/partials/_layout.scss */
 .icn-logo:after {
+  font-family: "GothamBold";
   content: "\F107";
 }
 
-/* line 95, ../scss/partials/_layout.scss */
+/* line 88, ../scss/partials/_layout.scss */
+.icn-close:after {
+  font-family: "GothamBold";
+  content: "\F103";
+}
+
+/* line 100, ../scss/partials/_layout.scss */
 #mainnav li.active a:after {
   font-family: "GothamBold";
   content: '\F100';
   font-size: 18px;
 }
 
-/* line 104, ../scss/partials/_layout.scss */
+/* line 109, ../scss/partials/_layout.scss */
 .nav a {
   padding-top: 24px;
   line-height: 1.1rem;
@@ -8501,21 +8518,93 @@ footer {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 116, ../scss/partials/_layout.scss */
+/* line 121, ../scss/partials/_layout.scss */
 .nav ul {
   margin: 0 0 0 30px;
 }
-/* line 118, ../scss/partials/_layout.scss */
+/* line 123, ../scss/partials/_layout.scss */
 .nav ul li {
   text-align: center;
 }
-/* line 120, ../scss/partials/_layout.scss */
+/* line 125, ../scss/partials/_layout.scss */
 .nav ul li + li {
   margin-left: 50px;
 }
 
-/* ----- WORK ----- */
-/* line 130, ../scss/partials/_layout.scss */
+/* line 133, ../scss/partials/_layout.scss */
+h1 {
+  text-transform: uppercase;
+  font-family: "gillsans-bold";
+  font-size: 4.2rem;
+  line-height: 3.0rem;
+  color: #ff4848;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 133, ../scss/partials/_layout.scss */
+  h1 {
+    font-size: 5.0rem;
+    line-height: 3.5rem;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 133, ../scss/partials/_layout.scss */
+  h1 {
+    font-size: 5.5rem;
+    line-height: 3.9rem;
+  }
+}
+@media only screen and (min-width: 90.063em) {
+  /* line 133, ../scss/partials/_layout.scss */
+  h1 {
+    font-size: 6.7rem;
+    line-height: 5.2rem;
+  }
+}
+
+/* line 154, ../scss/partials/_layout.scss */
+p {
+  font-family: "gillsans-bold";
+  color: #ff4848;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.0rem;
+  line-height: 1.2rem;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 154, ../scss/partials/_layout.scss */
+  p {
+    font-size: 1.0rem;
+    line-height: 1.2rem;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 154, ../scss/partials/_layout.scss */
+  p {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+}
+@media only screen and (min-width: 90.063em) {
+  /* line 154, ../scss/partials/_layout.scss */
+  p {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+}
+
+/* line 176, ../scss/partials/_layout.scss */
+.big {
+  font-size: 133.33%;
+  line-height: 133.33%;
+}
+
+/* line 181, ../scss/partials/_layout.scss */
+.chiffre {
+  font-family: "GothamBold";
+}
+
+/* ----- fullpage navigation ----- */
+/* line 188, ../scss/partials/_layout.scss */
 .fp-controlArrow {
   border: none;
   font-family: "GothamBold";
@@ -8523,84 +8612,110 @@ footer {
   color: #ff4848;
   margin-top: 0;
 }
-/* line 138, ../scss/partials/_layout.scss */
+/* line 196, ../scss/partials/_layout.scss */
 .fp-controlArrow.fp-prev {
   left: 20px;
 }
-/* line 140, ../scss/partials/_layout.scss */
+/* line 198, ../scss/partials/_layout.scss */
 .fp-controlArrow.fp-prev:after {
   content: "\F105";
 }
-/* line 144, ../scss/partials/_layout.scss */
+/* line 202, ../scss/partials/_layout.scss */
 .fp-controlArrow.fp-next {
   right: 120px;
 }
-/* line 146, ../scss/partials/_layout.scss */
+/* line 204, ../scss/partials/_layout.scss */
 .fp-controlArrow.fp-next:after {
   content: "\F106";
 }
 
-/* line 5, ../scss/partials/_work.scss */
+/* line 3, ../scss/partials/_work.scss */
+.section.work {
+  background: url('../img/work-bg_01.jpg?1418393023') no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+/* line 9, ../scss/partials/_work.scss */
+.section.work .backgroundcache {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: white;
+  display: none;
+}
+/* line 19, ../scss/partials/_work.scss */
 .section.work ul {
   margin-left: 0px;
   margin-right: 0px;
 }
-/* line 10, ../scss/partials/_work.scss */
-.section.work .tint {
+/* line 24, ../scss/partials/_work.scss */
+.section.work .row-up {
+  position: relative;
+  top: 0px;
+}
+/* line 28, ../scss/partials/_work.scss */
+.section.work .row-down {
+  position: relative;
+  top: 0px;
+}
+/* line 33, ../scss/partials/_work.scss */
+.section.work .workblock {
   display: block;
   cursor: pointer;
   position: relative;
   background-blend-mode: multiply;
   background-color: white;
 }
-/* line 18, ../scss/partials/_work.scss */
-.section.work .tint .overcont {
+/* line 41, ../scss/partials/_work.scss */
+.section.work .workblock .overcont {
   position: absolute;
   top: 0px;
   display: none;
   height: 100%;
   width: 150%;
 }
-/* line 26, ../scss/partials/_work.scss */
-.section.work .tint .strut {
+/* line 49, ../scss/partials/_work.scss */
+.section.work .workblock .strut {
   position: relative;
   display: inline-block;
   vertical-align: middle;
   height: 100%;
 }
-/* line 33, ../scss/partials/_work.scss */
-.section.work .tint .chev {
+/* line 56, ../scss/partials/_work.scss */
+.section.work .workblock .chev {
   display: inline-block;
   position: relative;
   vertical-align: middle;
 }
-/* line 40, ../scss/partials/_work.scss */
-.section.work .tint .chev:before {
+/* line 61, ../scss/partials/_work.scss */
+.section.work .workblock .chev:before {
   font-family: "GothamBold";
   color: white;
   content: "\F101";
   font-size: 3.5rem;
 }
 @media medium-up {
-  /* line 40, ../scss/partials/_work.scss */
-  .section.work .tint .chev:before {
+  /* line 61, ../scss/partials/_work.scss */
+  .section.work .workblock .chev:before {
     font-size: 4rem;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 40, ../scss/partials/_work.scss */
-  .section.work .tint .chev:before {
+  /* line 61, ../scss/partials/_work.scss */
+  .section.work .workblock .chev:before {
     font-size: 6.2rem;
   }
 }
 @media only screen and (min-width: 90.063em) {
-  /* line 40, ../scss/partials/_work.scss */
-  .section.work .tint .chev:before {
+  /* line 61, ../scss/partials/_work.scss */
+  .section.work .workblock .chev:before {
     font-size: 8rem;
   }
 }
-/* line 58, ../scss/partials/_work.scss */
-.section.work .tint .nom {
+/* line 79, ../scss/partials/_work.scss */
+.section.work .workblock .nom {
   display: inline-block;
   position: relative;
   vertical-align: middle;
@@ -8611,40 +8726,130 @@ footer {
   text-transform: uppercase;
 }
 @media medium-up {
-  /* line 58, ../scss/partials/_work.scss */
-  .section.work .tint .nom {
+  /* line 79, ../scss/partials/_work.scss */
+  .section.work .workblock .nom {
     font-size: 2rem;
     line-height: 1.5rem;
   }
 }
 @media only screen and (min-width: 64.063em) {
-  /* line 58, ../scss/partials/_work.scss */
-  .section.work .tint .nom {
+  /* line 79, ../scss/partials/_work.scss */
+  .section.work .workblock .nom {
     font-size: 3rem;
     line-height: 2.3rem;
   }
 }
 @media only screen and (min-width: 90.063em) {
-  /* line 58, ../scss/partials/_work.scss */
-  .section.work .tint .nom {
+  /* line 79, ../scss/partials/_work.scss */
+  .section.work .workblock .nom {
     font-size: 3.2rem;
     line-height: 2.4rem;
   }
 }
-/* line 97, ../scss/partials/_work.scss */
-.section.work .tint:hover {
+/* line 108, ../scss/partials/_work.scss */
+.section.work .workblock:hover {
   background-color: #ff4848;
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-/* line 100, ../scss/partials/_work.scss */
-.section.work .tint:hover .overcont {
+/* line 111, ../scss/partials/_work.scss */
+.section.work .workblock:hover .overcont {
   display: block;
 }
-/* line 107, ../scss/partials/_work.scss */
+/* line 119, ../scss/partials/_work.scss */
 .section.work .volet {
+  position: absolute;
+  width: 100%;
   background-color: #ff00ff;
+  display: block;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  /* <=IE8 */
+  height: 0px;
+}
+/* line 131, ../scss/partials/_work.scss */
+.section.work .volet.volet-up .voletclose {
+  top: 29px;
+}
+/* line 134, ../scss/partials/_work.scss */
+.section.work .volet.volet-up .cvtop {
+  display: block;
+}
+/* line 137, ../scss/partials/_work.scss */
+.section.work .volet.volet-up .cvbtm {
   display: none;
+}
+/* line 142, ../scss/partials/_work.scss */
+.section.work .volet.volet-down .voletclose {
+  top: 0px;
+}
+/* line 145, ../scss/partials/_work.scss */
+.section.work .volet.volet-down .cvtop {
+  display: none;
+}
+/* line 148, ../scss/partials/_work.scss */
+.section.work .volet.volet-down .cvbtm {
+  display: block;
+}
+/* line 154, ../scss/partials/_work.scss */
+.section.work .cvtop {
+  width: 100%;
+  height: 29px;
+  position: absolute;
+  top: 0px;
+}
+/* line 161, ../scss/partials/_work.scss */
+.section.work .cvbtm {
+  width: 100%;
+  height: 29px;
+  position: absolute;
+  bottom: 0px;
+}
+/* line 169, ../scss/partials/_work.scss */
+.section.work .voletclose {
+  position: absolute;
+  cursor: pointer;
+  left: 50%;
+  margin-left: -50px;
+  width: 100px;
+  height: 30px;
+  color: #ff4848;
+  font-size: 70px;
+  line-height: 20px;
+}
+
+/* line 3, ../scss/partials/_studio.scss */
+.section.studio #studio-slide0 {
+  background: url('../img/studio-bg_01.jpg?1418634704') no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+/* line 8, ../scss/partials/_studio.scss */
+.section.studio #studio-slide1 {
+  background: url('../img/studio-bg_02.jpg?1418634721') no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+/* line 13, ../scss/partials/_studio.scss */
+.section.studio #studio-slide2 {
+  background: url('../img/studio-bg_03.jpg?1418634759') no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* line 1, ../scss/partials/_contact.scss */
+.section.contact {
+  background: url('../img/contact-bg_01.jpg?1418634679') no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+/* line 7, ../scss/partials/_contact.scss */
+.section.contact p a {
+  color: #ff4848;
+}
+/* line 9, ../scss/partials/_contact.scss */
+.section.contact p a:hover {
+  color: white;
 }

@@ -4,4 +4,11 @@
   background-position: center center;
   background-size: cover;
   
+  p a {
+    color: $red;
+    &:hover {
+      color: white;
+    }
+  }
+  
 }

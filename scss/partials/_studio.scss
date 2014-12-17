@@ -1,7 +1,18 @@
 .section.studio {
   
-  background: image-url('studio-bg_01.jpg') no-repeat;
-  background-position: center center;
-  background-size: cover;
-  
+  #studio-slide0 {
+    background: image-url('studio-bg_01.jpg') no-repeat;
+    background-position: center center;
+    background-size: cover;  
+  }
+  #studio-slide1 {
+    background: image-url('studio-bg_02.jpg') no-repeat;
+    background-position: center center;
+    background-size: cover;  
+  }
+  #studio-slide2 {
+    background: image-url('studio-bg_03.jpg') no-repeat;
+    background-position: center center;
+    background-size: cover;  
+  }
 }

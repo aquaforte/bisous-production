@@ -2,12 +2,35 @@
 
 .section.work {
   
+  background: image-url('work-bg_01.jpg') no-repeat;
+  background-position: center center;
+  background-size: cover;
+  
+  .backgroundcache {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: white;
+    display:none;
+  }
+
   ul {
       margin-left: 0px;
       margin-right: 0px;
   }
+  
+  .row-up {
+    position: relative;
+    top: 0px;
+  }
+  .row-down {
+    position: relative;
+    top: 0px;
+  }
     
-  .tint {
+  .workblock {
     display: block;
     cursor: pointer;
     position: relative;
@@ -34,8 +57,6 @@
       display: inline-block;
       position: relative;
       vertical-align: middle;
- //     top: 50%;
- //     line-height: 1rem;
       
       &:before {
         font-family: $dsn-fnt;
@@ -58,36 +79,26 @@
     .nom {
       display: inline-block;
       position: relative;
-      vertical-align: middle;
- //     top: 50%;
-      
+      vertical-align: middle;      
       color: white;
       font-family: $bold-fnt;
       
       font-size: 2rem;
       line-height: 1.5rem;
- //     margin-top: -16px;
- //     margin-left: 42px;
       
       @media #{medium-up} {
         font-size: 2rem;
         line-height: 1.5rem;
- //       margin-top: -16px;
- //       margin-left: 45px;
       }
       
       @media #{$large-up} {
         font-size: 3rem;
         line-height: 2.3rem;
- //       margin-top: -32px;
- //       margin-left: 70px;
       }
       
       @media #{$xlarge-up} {
         font-size: 3.2rem;
         line-height: 2.4rem;
-  //      margin-top: -27px;
-  //      margin-left: 90px;
       }
       
       text-transform: uppercase;
@@ -104,8 +115,67 @@
   }
   
   
+  
   .volet {
+    position: absolute;
+    width: 100%;
+    
     background-color: #ff00ff;
-    display: none;
+    display: block;
+    opacity: 0;
+    filter: alpha(opacity=0); /* <=IE8 */
+    height: 0px;
+    
+    &.volet-up {
+      
+      .voletclose {
+        top: 29px;
+      }
+      .cvtop {
+        display: block;
+      }
+      .cvbtm {
+        display: none;
+      }
+    }
+    &.volet-down { 
+      .voletclose {
+        top: 0px;
+      }
+      .cvtop {
+        display: none;
+      }
+      .cvbtm {
+        display: block;
+      }
+    }
+  }
+  
+  .cvtop {
+    @extend .sprite-mtycv-top;
+    width: 100%;
+    height: 29px;
+    position: absolute;
+    top: 0px;
+  }
+  .cvbtm {
+    @extend .sprite-mtycv-btm;
+    width: 100%;
+    height: 29px;
+    position: absolute;
+    bottom: 0px;
+  }
+  
+  .voletclose {
+        
+    position: absolute;
+    cursor: pointer;
+    left: 50%;
+    margin-left: -50px;
+    width: 100px;
+    height: 30px;
+    color: $red;
+    font-size: 70px;
+    line-height: 20px;
   }
 }

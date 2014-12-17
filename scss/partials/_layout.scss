@@ -82,7 +82,12 @@ footer {
 }
 
 .icn-logo:after {
+  font-family: $dsn-fnt;
   content: "\F107";
+}
+.icn-close:after {
+  font-family: $dsn-fnt;
+  content: "\F103";
 }
 #mainnav {
   li {
@@ -125,7 +130,60 @@ footer {
 }
 
 
-/* ----- WORK ----- */
+h1 {
+  text-transform: uppercase;
+  font-family: $bold-fnt;
+  
+  font-size: 4.2rem;
+  line-height: 3.0rem;
+  @media #{$medium-up} {
+      font-size: 5.0rem;
+      line-height: 3.5rem;
+  }
+  @media #{$large-up} {
+      font-size: 5.5rem;
+      line-height: 3.9rem;
+  }
+  @media #{$xlarge-up} {
+      font-size: 6.7rem;
+      line-height: 5.2rem;
+  }
+  
+  color: $red;
+}
+p {
+  font-family: $bold-fnt;
+  color: $red;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  font-size: 1.0rem;
+  line-height: 1.2rem;
+  @media #{$medium-up} {
+      font-size: 1.0rem;
+      line-height: 1.2rem;
+  }
+  @media #{$large-up} {
+      font-size: 1.1rem;
+      line-height: 1.3rem;
+  }
+  @media #{$xlarge-up} {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+  }
+}
+
+.big {
+  font-size: 133.33%;
+  line-height: 133.33%;
+}
+
+.chiffre {
+    font-family: $dsn-fnt;
+}
+
+
+/* ----- fullpage navigation ----- */
 
 .fp-controlArrow {
   border: none;
@@ -150,8 +208,3 @@ footer {
 }
 
 
-
-
-.volet {
-  
-}
