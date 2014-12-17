@@ -120,7 +120,7 @@
     position: absolute;
     width: 100%;
     
-    background-color: #ff00ff;
+    background-color: #a5c4c4;
     display: block;
     opacity: 0;
     filter: alpha(opacity=0); /* <=IE8 */
@@ -171,11 +171,11 @@
     position: absolute;
     cursor: pointer;
     left: 50%;
-    margin-left: -50px;
-    width: 100px;
-    height: 30px;
+    margin-left: -90px;
+    width: 180px;
+    height: 70px;
     color: $red;
-    font-size: 70px;
-    line-height: 20px;
+    font-size: 90px;
+    line-height: 60px;
   }
 }

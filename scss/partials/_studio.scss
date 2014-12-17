@@ -1,3 +1,5 @@
+@import "compass/css3/transition";
+
 .section.studio {
   
   #studio-slide0 {
@@ -14,5 +16,14 @@
     background: image-url('studio-bg_03.jpg') no-repeat;
     background-position: center center;
     background-size: cover;  
+  }
+  
+
+  .row-down {
+      margin-top: 50px;
+      &.active {
+          margin-top: 0px;
+      }
+      @include transition(all .7s ease-out);
   }
 }

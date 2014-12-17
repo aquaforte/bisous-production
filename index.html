@@ -40,11 +40,11 @@
         <div id="section2" class="section work">
           
           <!-- **** premier slide **** -->
-          <div class="slide" id="slide0">
+          <div class="slide" id="work-slide1" data-anchor="work-slide1">
             <div class="backgroundcache"></div>
             
-            <!-- slide 0 vignettes du HAUT -->
-            <div class="row row-up" data-stellar-ratio="1.0">
+            <!-- 'work-slide1' vignettes du HAUT -->
+            <div class="row row-up">
               <ul class="small-block-grid-3">
                 
                 <li class="vignette">
@@ -80,8 +80,8 @@
               </ul>
             </div> <!-- end .row.row-up -->
             
-            <!-- slide 0 vignettes du BAS -->
-            <div class="row row-down" data-stellar-ratio="1.0">
+            <!-- 'work-slide1' vignettes du BAS -->
+            <div class="row row-down">
               <ul class="small-block-grid-3">
                 
                 <li class="vignette">
@@ -131,13 +131,13 @@
             </div> <!-- end .volet -->
             
             
-          </div> <!-- end #slideO.slide -->
+          </div> <!-- end #work-slide1.slide -->
           
           
           <!-- **** deuxième slide **** -->
-          <div class="slide" id="slide1">
+          <div class="slide" id="work-slide2" data-anchor="work-slide2">
             
-            <!-- slide 1 vignettes du HAUT -->
+            <!-- 'work-slide2' vignettes du HAUT -->
             <div class="row row-up">
               <ul class="small-block-grid-3">
                 
@@ -174,7 +174,7 @@
               </ul>
             </div> <!-- end .row.row-up -->
             
-            <!-- slide 0 vignettes du BAS -->
+            <!-- 'work-slide2' vignettes du BAS -->
             <div class="row row-down">
               <ul class="small-block-grid-3">
                 
@@ -223,7 +223,7 @@
               <div class="voletclose"><i class="icn icn-close"></i></div>
             </div> <!-- end .volet -->
             
-          </div> <!-- end #slide1.slide -->
+          </div> <!-- end #work-slide2.slide -->
 
         </div> <!-- end #work -->
         
@@ -231,60 +231,60 @@
         <div id="section3" class="section studio">
           
           <!-- **** premier slide **** -->
-          <div id="studio-slide0" class="slide">
-            <div class="row">
+          <div id="studio-slide1" class="slide" data-anchor="studio-slide1">
+            <div class="row row-up">
               <div class="small-12">
                 <h1>Petit<br />mais costaud!</h1>
               </div>
             </div>
-            <div class="row">
+            <div class="row row-down">
               <div class="small-9 medium-6 large-5">
                 <p>Bisous c'est un studio de création et de production audiovisuel.</p>
                 <p>C'est aussi une grande flexibilité et réactivité, avec la possibilité d'y associer des moyens conséquents de production.</p>
                 <p>Bisous s'occupe de projets de création complexes à long terme avec une attention entièrement axée sur la conception et la production de valeur.</p>
               </div>
             </div> <!-- end .row -->
-          </div> <!-- end .slide#studio-slide0 -->
+          </div> <!-- end #studio-slide1.slide -->
           
           <!-- **** deuxième slide **** -->
-          <div id="studio-slide1" class="slide">
-            <div class="row">
+          <div id="studio-slide2" class="slide" data-anchor="studio-slide2">
+            <div class="row row-up">
               <div class="small-12">
                 <h1>Nous,<br />c'est le goût&nbsp;!</h1>
               </div>
             </div>
-            <div class="row">
+            <div class="row row-down">
               <div class="small-9 medium-6 large-5">
                 <p>Bisous c'est comme un bon "burger maison"&nbsp;!<br />La réflexion et la narration sont les principaux ingrédients de tous nos projets. Il ne suffit pas de  faire joli, il faut faire intelligent. C'est la rencontre de la création et de la production qui donne à Bisous toute sa force et sa générosité.</p>
                 <p>Car pour faire un bon film, il faut une bonne histoire (dixit J. Gabin).</p>
               </div>
             </div> <!-- end .row -->
-          </div> <!-- end .slide#studio-slide1 -->
+          </div> <!-- end #studio-slide2.slide -->
           
           <!-- **** troisième slide **** -->
-          <div id="studio-slide2" class="slide">
-            <div class="row">
+          <div id="studio-slide3" class="slide" data-anchor="studio-slide3">
+            <div class="row row-up">
               <div class="small-12">
                 <h1>C'est mon<br />astuce beauté</h1>
               </div>
             </div>
-            <div class="row">
+            <div class="row row-down">
               <div class="small-9 medium-6 large-5">
-                <p>bon là, je vais réécrire les trucs de la maquette, je vois pas l'intérêt...</p>
+                <p>bon là, je ne vais pas réécrire les trucs de la maquette, je vois pas l'intérêt... (faut pas pousser, non plus&nbsp;!)</p>
               </div>
             </div> <!-- end .row -->
-          </div> <!-- end .slide#studio-slide2 -->
+          </div> <!-- end #studio-slide3.slide -->
           
         </div> <!-- end #studio -->
         
         <!-- RUBRIQUE CONTACT -->
         <div id="section4" class="section contact">
-            <div class="row">
+            <div class="row row-up">
               <div class="small-12">
                 <h1>À seulement<br /><span class="chiffre">1</span> heure de Paris</h1>
               </div>
             </div>
-            <div class="row">
+            <div class="row row-down">
               <div class="small-9 medium-6 large-5">
                   <p>Au cœur d'un centre ville historique, nos bureaux sont ouverts tous les jours&nbsp;:<br />
                     <span class="big">30 bis, rue Sainte-Anne - 45000 Orléans.</span><br />
@@ -310,10 +310,7 @@
     <script type="text/javascript" src="js/vendor/min/jquery.slimscroll.min.js"></script>
     <script type="text/javascript" src="js/vendor/jquery.easings.js"></script>
     <script type="text/javascript" src="js/vendor/min/jquery.transit.min.js"></script>
- <!--   
-    <script type="text/javascript" src="js/vendor/jquery.stellar.custom.js"></script>
-    <script type="text/javascript" src="js/vendor/iscroll.js"></script>
- -->   
+   
     <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>

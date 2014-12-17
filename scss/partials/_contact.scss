@@ -11,4 +11,12 @@
     }
   }
   
+  .row-down {
+      margin-top: 50px;
+      &.active {
+          margin-top: 0px;
+      }
+      @include transition(all .7s ease-out);
+  }
+  
 }

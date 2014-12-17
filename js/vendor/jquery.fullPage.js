@@ -15,6 +15,7 @@
 			'sectionsColor' : [],
 			'anchors':[],
 			'scrollingSpeed': 700,
+			'horizontalScrollingSpeed': 700,
 			'easing': 'easeInQuart',
 			'menu': false,
 			'navigation': false,
@@ -1160,15 +1161,15 @@
 			if(options.css3){
 				var translate3d = 'translate3d(-' + destinyPos.left + 'px, 0px, 0px)';
 
-				slides.find('.fp-slidesContainer').toggleClass('fp-easing', options.scrollingSpeed>0).css(getTransforms(translate3d));
+				slides.find('.fp-slidesContainer').toggleClass('fp-easing', options.horizontalScrollingSpeed>0).css(getTransforms(translate3d));
 
 				setTimeout(function(){
 					afterSlideLoads();
-				}, options.scrollingSpeed, options.easing);
+				}, options.horizontalScrollingSpeed, options.easing);
 			}else{
 				slidesContainer.animate({
 					scrollLeft : destinyPos.left
-				}, options.scrollingSpeed, options.easing, function() {
+				}, options.horizontalScrollingSpeed, options.easing, function() {
 
 					afterSlideLoads();
 				});
@@ -1198,9 +1199,9 @@
 	    		//http://stackoverflow.com/questions/4298612/jquery-how-to-call-resize-event-only-once-its-finished-resizing
 	      		clearTimeout(resizeId);
 
-	        	resizeId = setTimeout(function(){
+	        //	resizeId = setTimeout(function(){
 	        		$.fn.fullpage.reBuild(true);
-	        	}, 500);
+	        //	}, 500);
 	      	}
 	    }
 

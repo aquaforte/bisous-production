@@ -40,10 +40,74 @@ var openwork = false,
       menu: '#mainnav',
       anchors: ['loading', 'home', 'work', 'studio', 'contact'],
       scrollingSpeed:  1800,
+      horizontalScrollingSpeed: 1000,
       easing: 'easeInOutCubic',
       autoScrolling: true,
       loopHorizontal: false,
-      resize: true
+      
+      afterLoad: function(anchorLink, index) {
+          
+          _console("afterLoad: "+anchorLink);
+          
+          // actions à l'arrivée de la rubrique "contact"
+          if (anchorLink=="contact") {
+              
+              $('.'+anchorLink).find('.row').addClass('active');
+          }
+      },
+      
+      onLeave: function(index, newIndex, direction) {
+          
+          _console("onLeave: "+index+"->"+newIndex);
+          
+          // actions au départ de la rubrique "Studio"
+          if (index==4) {
+          
+            $('#section'+(index-1)).find('.slide').each(function(i) {
+              
+              if ($(this).find('.row').hasClass('active')) $(this).find('.row').removeClass('active');
+              
+            });
+          }
+          
+          // actions au départ de la rubrique "Contact"
+          if (index==5) {
+              if ($('#section'+(index-1)).find('.row').hasClass('active')) $('#section'+(index-1)).find('.row').removeClass('active');
+          }
+      },
+      
+      afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
+          
+          _console("afterSlideLoad: "+slideAnchor+"("+slideIndex+")");
+          
+          // actions dans les slides de la rubrique "studio"
+          if (anchorLink=="studio") {
+              
+              $('#'+slideAnchor).find('.row').addClass('active');
+              $('.'+anchorLink).find('.slide').each(function(i) {
+                  if (i!=slideIndex) {
+                      if ($(this).find('.row').hasClass('active')) $(this).find('.row').removeClass('active');
+                  }
+              });
+              
+          }
+          
+      },
+      
+      onSlideLeave: function(anchorLink, index, slideIndex, direction) {
+          
+          _console("onSlideLeave: "+anchorLink+" ("+slideIndex+")"+(direction=="right"?" ->":" <-"));
+          
+          // actions dans les slides de la rubrique "studio"
+          if (anchorLink=="studio") {
+              
+              
+          //    _console($('.'+anchorLink).find('.slide').length);
+        //      $('.'+anchorLink).find('.slide').eq(slideIndex).find('.row').removeClass('active');
+              
+          }
+          
+      }
     });
 
    
@@ -89,7 +153,7 @@ var openwork = false,
         
         
         // calcul de la hauteur du contenu
-        var vh = $(window).innerHeight()-($('header').height() + $('header').offset().top )-$('footer').height()+10;
+        var vh = $(window).innerHeight()-($('header').height() + $('header').offset().top )-$('footer').height();
         
         
         // décalage des vignettes (vers le haut et vers le bas)
@@ -119,7 +183,7 @@ var openwork = false,
         $(parentslide).find('.volet').transition({
             opacity: 1,
             height: vh,
-            top: ($('header').height()+$('header').offset().top)-10
+            top: ($('header').height()+$('header').offset().top)-5
           },
           1000,
           'easeOutCubic');

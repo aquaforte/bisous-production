@@ -8498,7 +8498,7 @@ footer {
 /* line 88, ../scss/partials/_layout.scss */
 .icn-close:after {
   font-family: "GothamBold";
-  content: "\F103";
+  content: "\F104";
 }
 
 /* line 100, ../scss/partials/_layout.scss */
@@ -8762,7 +8762,7 @@ p {
 .section.work .volet {
   position: absolute;
   width: 100%;
-  background-color: #ff00ff;
+  background-color: #a5c4c4;
   display: block;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -8812,31 +8812,43 @@ p {
   position: absolute;
   cursor: pointer;
   left: 50%;
-  margin-left: -50px;
-  width: 100px;
-  height: 30px;
+  margin-left: -90px;
+  width: 180px;
+  height: 70px;
   color: #ff4848;
-  font-size: 70px;
-  line-height: 20px;
+  font-size: 90px;
+  line-height: 60px;
 }
 
-/* line 3, ../scss/partials/_studio.scss */
+/* line 5, ../scss/partials/_studio.scss */
 .section.studio #studio-slide0 {
   background: url('../img/studio-bg_01.jpg?1418634704') no-repeat;
   background-position: center center;
   background-size: cover;
 }
-/* line 8, ../scss/partials/_studio.scss */
+/* line 10, ../scss/partials/_studio.scss */
 .section.studio #studio-slide1 {
   background: url('../img/studio-bg_02.jpg?1418634721') no-repeat;
   background-position: center center;
   background-size: cover;
 }
-/* line 13, ../scss/partials/_studio.scss */
+/* line 15, ../scss/partials/_studio.scss */
 .section.studio #studio-slide2 {
   background: url('../img/studio-bg_03.jpg?1418634759') no-repeat;
   background-position: center center;
   background-size: cover;
+}
+/* line 22, ../scss/partials/_studio.scss */
+.section.studio .row-down {
+  margin-top: 50px;
+  -moz-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+}
+/* line 24, ../scss/partials/_studio.scss */
+.section.studio .row-down.active {
+  margin-top: 0px;
 }
 
 /* line 1, ../scss/partials/_contact.scss */
@@ -8852,4 +8864,16 @@ p {
 /* line 9, ../scss/partials/_contact.scss */
 .section.contact p a:hover {
   color: white;
+}
+/* line 14, ../scss/partials/_contact.scss */
+.section.contact .row-down {
+  margin-top: 50px;
+  -moz-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+}
+/* line 16, ../scss/partials/_contact.scss */
+.section.contact .row-down.active {
+  margin-top: 0px;
 }
