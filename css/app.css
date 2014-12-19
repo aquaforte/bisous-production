@@ -8928,21 +8928,36 @@ p {
 .section.work .volet.volet-down .cvbtm {
   display: block;
 }
-/* line 164, ../scss/partials/_work.scss */
+/* line 163, ../scss/partials/_work.scss */
+.section.work .volet img {
+  width: 100%;
+  height: auto;
+}
+/* line 169, ../scss/partials/_work.scss */
+.section.work .video {
+  width: 100%;
+  height: 100%;
+}
+/* line 173, ../scss/partials/_work.scss */
+.section.work .vimeo {
+  width: 100%;
+  height: 100%;
+}
+/* line 178, ../scss/partials/_work.scss */
 .section.work .cvtop {
   width: 100%;
   height: 29px;
   position: absolute;
   top: 0px;
 }
-/* line 171, ../scss/partials/_work.scss */
+/* line 185, ../scss/partials/_work.scss */
 .section.work .cvbtm {
   width: 100%;
   height: 29px;
   position: absolute;
   bottom: 0px;
 }
-/* line 179, ../scss/partials/_work.scss */
+/* line 193, ../scss/partials/_work.scss */
 .section.work .voletclose {
   position: absolute;
   cursor: pointer;

@@ -79,8 +79,10 @@ var homeItv = null,
           clearHomeDiapo();
           
           // si une video de home est en lecture, on l'arrête
+          // et on la réinitialise
           if (homevid!=null) {
             $f(homevid).api('pause');
+            $f(homevid).api('unload');
             homevid = null;
           }
           
@@ -89,11 +91,17 @@ var homeItv = null,
         // actions au départ de la rubrique "Work"
         if (index==3) {
         
+          // animation des blocs
           $('#section'+(index-1)).find('.slide').each(function(i) {
             
             if ($(this).find('.row').hasClass('active')) $(this).find('.row').removeClass('active');
             
           });
+          
+          // fermeture du volet
+          if (openwork) {
+            $('.voletclose').trigger( "click" );
+          }
         }
         
         // actions au départ de la rubrique "Studio"
@@ -213,8 +221,10 @@ var homeItv = null,
         if (anchorLink=="home") {
            
           // si une video de home est en lecture, on l'arrête
+          // et on la réinitialise
           if (homevid!=null) {
             $f(homevid).api('pause');
+            $f(homevid).api('unload');
             homevid = null;
           }
           
@@ -311,6 +321,12 @@ var homeItv = null,
         $('.backgroundcache').fadeIn(1000);
         
         
+        _console('controlArrow : '+$(parentsection).find('.fp-controlArrow').length);
+        
+        $(parentsection).find('.fp-controlArrow').each(function(){
+          if ($(this).css('display')=='none') $(this).addClass('hidden');
+          else $(this).fadeOut(1000);
+        });
         
         // calcul de la hauteur du contenu
         var vh = $(window).innerHeight()-($('header').height() + $('header').offset().top )-$('footer').height();
@@ -437,6 +453,12 @@ var homeItv = null,
           
           
         $('.backgroundcache').fadeOut(1000);
+        
+        
+        $(parentsection).find('.fp-controlArrow').each(function(){
+          if (!$(this).hasClass('hidden')) $(this).fadeIn(1000);
+          else $(this).removeClass('hidden');
+        });
         
         
       }
