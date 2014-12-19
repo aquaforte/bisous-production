@@ -1,0 +1,108 @@
+.section.home {
+  
+  .slidecontent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .video {
+      width: 100%;
+      height: 100%;
+   //   overflow: hidden;
+    .vimeo {
+      width: 100%;
+      height: 100%;
+ //     margin-top: -5%;
+    }
+    
+    & + .row {
+      position: absolute;
+      top: 0px;    
+      left: 50%;
+      margin-left: -319px;
+      
+      @media #{$medium-up} {
+        margin-left: -390px;
+      }
+      @media #{$large-up} {
+        margin-left: -517px;
+      }
+      @media #{$xlarge-up} {
+        margin-left: -750px;
+      }
+    }
+  }
+  
+  .row {
+    height: 100%;
+    &>div {
+      height: 100%;
+    }
+  
+    .strut {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%;
+    }
+    
+    .chev {
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      height: 200px;
+      line-height: 200px;
+      
+      &:before {
+        font-family: $dsn-fnt;
+        color: $red;
+        content: "\F101";
+        
+        font-size: 4rem;
+        @media #{medium-up} {
+          font-size: 6rem;
+        }
+        @media #{$large-up} {
+          font-size: 8rem;
+        }
+        @media #{$xlarge-up} {
+          font-size: 11rem;
+        }
+      }
+    }
+    
+    
+    
+    .nom {
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;      
+      color: $red;
+      font-family: $bold-fnt;
+      padding-left: 10px;
+      
+      font-size: 1.7rem;
+      line-height: 1.3rem;
+      
+      @media #{medium-up} {
+        font-size: 3rem;
+        line-height: 2.3rem;
+      }
+      
+      @media #{$large-up} {
+        font-size: 4rem;
+        line-height: 3rem;
+      }
+      
+      @media #{$xlarge-up} {
+        font-size: 5.2rem;
+        line-height: 4rem;
+      }
+      
+      text-transform: uppercase;
+      
+    }
+    
+  }
+}

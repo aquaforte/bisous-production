@@ -7,15 +7,18 @@ var debug = true;
 
 
 var openwork = false,
-    parentslide,
-    parentsection,
-    parentul,
-    isup,
-    $mtycv,
-    vcid,
-    vcwidth = 5000;
+  parentslide,
+  parentsection,
+  parentul,
+  isup,
+  $mtycv,
+  vcid,
+  vcwidth = 5000;
 
-
+var homeItv = null,
+    homeSlideId = 1,
+    homevid = null;
+    
 
 (function(){
   
@@ -39,76 +42,234 @@ var openwork = false,
     $('#fullpage').fullpage({
       menu: '#mainnav',
       anchors: ['loading', 'home', 'work', 'studio', 'contact'],
+      css3: true,
       scrollingSpeed:  1800,
-      horizontalScrollingSpeed: 1000,
+      horizontalScrollingSpeed: 1200,
       easing: 'easeInOutCubic',
       autoScrolling: true,
       loopHorizontal: false,
       
       afterLoad: function(anchorLink, index) {
           
-          _console("afterLoad: "+anchorLink);
+        _console("afterLoad: "+anchorLink);
+        
+        // actions à l'arrivée de la rubrique "Home"
+        if (anchorLink=="home") {
+  
+          launchHomeDiapo(index);
           
-          // actions à l'arrivée de la rubrique "contact"
-          if (anchorLink=="contact") {
-              
-              $('.'+anchorLink).find('.row').addClass('active');
-          }
+        }
+        
+        // actions à l'arrivée de la rubrique "Contact"
+        if (anchorLink=="contact") {
+            
+          $('.'+anchorLink).find('.row').addClass('active');
+        }
+
       },
       
       onLeave: function(index, newIndex, direction) {
           
-          _console("onLeave: "+index+"->"+newIndex);
+        _console("onLeave: "+index+"->"+newIndex);
+        
+        // actions au départ de la rubrique "Home"
+        if (index==2) {
           
-          // actions au départ de la rubrique "Studio"
-          if (index==4) {
+          // on detruit l'intervalle de diaporama
+          clearHomeDiapo();
           
-            $('#section'+(index-1)).find('.slide').each(function(i) {
-              
-              if ($(this).find('.row').hasClass('active')) $(this).find('.row').removeClass('active');
-              
-            });
+          // si une video de home est en lecture, on l'arrête
+          if (homevid!=null) {
+            $f(homevid).api('pause');
+            homevid = null;
           }
           
-          // actions au départ de la rubrique "Contact"
-          if (index==5) {
-              if ($('#section'+(index-1)).find('.row').hasClass('active')) $('#section'+(index-1)).find('.row').removeClass('active');
-          }
+        }
+        
+        // actions au départ de la rubrique "Work"
+        if (index==3) {
+        
+          $('#section'+(index-1)).find('.slide').each(function(i) {
+            
+            if ($(this).find('.row').hasClass('active')) $(this).find('.row').removeClass('active');
+            
+          });
+        }
+        
+        // actions au départ de la rubrique "Studio"
+        if (index==4) {
+        
+          $('#section'+(index-1)).find('.slide').each(function(i) {
+            
+            if ($(this).find('.row').hasClass('active')) $(this).find('.row').removeClass('active');
+            
+          });
+        }
+        
+        // actions au départ de la rubrique "Contact"
+        if (index==5) {
+          if ($('#section'+(index-1)).find('.row').hasClass('active')) $('#section'+(index-1)).find('.row').removeClass('active');
+        }
+          
+
       },
       
       afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
           
-          _console("afterSlideLoad: "+slideAnchor+"("+slideIndex+")");
+        _console("afterSlideLoad: "+slideAnchor+"("+slideIndex+")");
+        
+        // actions dans les slides de la rubrique "Home"
+        if (anchorLink=="home") {
           
-          // actions dans les slides de la rubrique "studio"
-          if (anchorLink=="studio") {
-              
-              $('#'+slideAnchor).find('.row').addClass('active');
-              $('.'+anchorLink).find('.slide').each(function(i) {
-                  if (i!=slideIndex) {
-                      if ($(this).find('.row').hasClass('active')) $(this).find('.row').removeClass('active');
-                  }
-              });
-              
+          
+          // si le slide contient une video
+          if ($('#'+slideAnchor).find('.video').length>0) {
+  
+          
+            // initialisation du contrôle de la video
+            var vidId = $('#'+slideAnchor).find('.vimeo').attr('id');
+            var iframe = $('#'+vidId)[0];
+            var player = $f(iframe);
+        
+        
+            // Call the API when a button is pressed
+            $('.chev.play').click(function() {
+                player.api('play');
+                $('#'+slideAnchor).find('.overvideo').hide();
+                homevid = iframe;
+                
+                clearHomeDiapo();
+                
+            });
+        
+            function onPause(id) {
+                _console('video paused');
+               $('#'+slideAnchor).find('.overvideo').show();
+                homevid = null;
+            }
+        
+            function onFinish(id) {
+                _console('video finished');
+               $('#'+slideAnchor).find('.overvideo').show();
+                homevid = null;
+            }
+        /*
+            function onPlayProgress(data, id) {
+               // _console('video '+data.seconds + 's played'); 
+            }
+        */   
+            
+            // When the player is ready, add listeners for pause, finish, and playProgress
+            player.addEvent('ready', function() {
+                _console('video ready');
+                
+                player.addEvent('pause', onPause);
+                player.addEvent('finish', onFinish);
+            //  player.addEvent('playProgress', onPlayProgress);
+            });
+        
+            
+          } else {
+            // si le slide ne contient pas de video
+            // on lance le diaporama si ce n'est pas déjà fait
+            if (homeItv==null) launchHomeDiapo(index);  
+            
           }
+          
+        }
+        
+        
+        // actions dans les slides de la rubrique "Work"
+        if (anchorLink=="work") {
+            
+          $('#'+slideAnchor).find('.row').addClass('active');
+          $('.'+anchorLink).find('.slide').each(function(i) {
+            if (i!=slideIndex) {
+              if ($(this).find('.row').hasClass('active')) $(this).find('.row').removeClass('active');
+            }
+          });
+            
+        }
+        
+        // actions dans les slides de la rubrique "Studio"
+        if (anchorLink=="studio") {
+            
+          $('#'+slideAnchor).find('.row').addClass('active');
+          $('.'+anchorLink).find('.slide').each(function(i) {
+            if (i!=slideIndex) {
+              if ($(this).find('.row').hasClass('active')) $(this).find('.row').removeClass('active');
+            }
+          });
+            
+        }
           
       },
       
       onSlideLeave: function(anchorLink, index, slideIndex, direction) {
           
-          _console("onSlideLeave: "+anchorLink+" ("+slideIndex+")"+(direction=="right"?" ->":" <-"));
-          
-          // actions dans les slides de la rubrique "studio"
-          if (anchorLink=="studio") {
-              
-              
-          //    _console($('.'+anchorLink).find('.slide').length);
-        //      $('.'+anchorLink).find('.slide').eq(slideIndex).find('.row').removeClass('active');
-              
+        _console("onSlideLeave: "+anchorLink+" ("+slideIndex+")"+(direction=="right"?" ->":" <-"));
+        
+        // actions dans les slides de la rubrique "Home"
+        if (anchorLink=="home") {
+           
+          // si une video de home est en lecture, on l'arrête
+          if (homevid!=null) {
+            $f(homevid).api('pause');
+            homevid = null;
           }
           
+        }
+        
+        // actions dans les slides de la rubrique "Studio"
+        if (anchorLink=="studio") {
+                        
+        }
+          
+      },
+      
+      onLeftClick: function(anchorLink, index, slideIndex) {
+        
+        if (anchorLink=="home") {
+          clearHomeDiapo();
+        }
+        
+      },
+      
+      onRightClick: function(anchorLink, index, slideIndex) {
+        
+        if (anchorLink=="home") {
+          clearHomeDiapo();
+        }
       }
     });
+
+
+    // création de l'intervalle du diaporama de la homepage
+    function launchHomeDiapo(index) {
+      
+      _console("set homeitv");
+      if (homeItv==null) {
+        
+        homeSlideId = $('.home').find('.fp-slide').index('.fp-slide.active');
+        
+        homeItv = setInterval(function(){
+              
+              _console("home next slide ("+homeSlideId+"/"+$('.home').find(".slide").length+")");
+              
+              $.fn.fullpage.moveTo(index, homeSlideId++);
+              if (homeSlideId==$('.home').find(".slide").length) homeSlideId = 0;
+              
+            },5000);
+      }
+    }
+    
+    // destruction de l'intervalle du diaporama de la homepage
+    function clearHomeDiapo() {
+      
+      _console("clear homeitv");
+      if (homeItv) clearInterval(homeItv);
+      homeItv = null;
+    }
 
    
     // déclaration d'un écouteur de redimensionnement de la fenêtre
@@ -139,7 +300,6 @@ var openwork = false,
         
         // determination et calage de l'indicateur
         $mtycv = isup ? $('.cvtop') : $('.cvbtm');
-   //     $mtycv.show();
         
         vcid = $(parentul).find(".workblock").index($(this));
         vcwidth = 5000;

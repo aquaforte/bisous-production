@@ -53,7 +53,9 @@
 			'afterResize': null,
 			'afterReBuild': null,
 			'afterSlideLoad': null,
-			'onSlideLeave': null
+			'onSlideLeave': null,
+			'onLeftClick': null,
+			'onRightClick': null
 		}, options);
 
 	    // Disable mutually exclusive settings
@@ -1095,10 +1097,34 @@
 		 * Scrolling horizontally when clicking on the slider controls.
 		 */
 		$('.fp-section').on('click touchstart', '.fp-controlArrow', function() {
+  		
+  		
+		    var activeSection = $('.fp-section.active');
+		    var slides = activeSection.find('.fp-slides');
+		    var activeSlide = activeSection.find('.fp-slide.active')
+		    
+		    var activeSectionAnchor = $(activeSection).data('anchor');
+		    var activeSectionIndex = activeSection.parent().find('.fp-section').index(activeSection);
+		    var activeSlideIndex = activeSlide.parent().find('.fp-slide').index(activeSlide);
+  		
+  		
+  		
 			if ($(this).hasClass('fp-prev')) {
+				// trigger onLeftClick callback if defined
+				if($.isFunction( options.onLeftClick )){
+          options.onLeftClick.call(this, activeSectionAnchor, activeSectionIndex, activeSlideIndex);
+  		  }
+  		  
 				$.fn.fullpage.moveSlideLeft();
+				
 			} else {
+				// trigger onRightClick callback if defined
+				if($.isFunction( options.onRightClick )){
+          options.onRightClick.call(this, activeSectionAnchor, activeSectionIndex, activeSlideIndex);
+  		  }
+  		  
 				$.fn.fullpage.moveSlideRight();
+				
 			}
 		});
 

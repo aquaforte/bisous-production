@@ -8629,6 +8629,129 @@ p {
   content: "\F106";
 }
 
+/* line 3, ../scss/partials/_home.scss */
+.section.home .slidecontent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* line 9, ../scss/partials/_home.scss */
+.section.home .video {
+  width: 100%;
+  height: 100%;
+}
+/* line 13, ../scss/partials/_home.scss */
+.section.home .video .vimeo {
+  width: 100%;
+  height: 100%;
+}
+/* line 19, ../scss/partials/_home.scss */
+.section.home .video + .row {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  margin-left: -319px;
+}
+@media only screen and (min-width: 40.063em) {
+  /* line 19, ../scss/partials/_home.scss */
+  .section.home .video + .row {
+    margin-left: -390px;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 19, ../scss/partials/_home.scss */
+  .section.home .video + .row {
+    margin-left: -517px;
+  }
+}
+@media only screen and (min-width: 90.063em) {
+  /* line 19, ../scss/partials/_home.scss */
+  .section.home .video + .row {
+    margin-left: -750px;
+  }
+}
+/* line 37, ../scss/partials/_home.scss */
+.section.home .row {
+  height: 100%;
+}
+/* line 39, ../scss/partials/_home.scss */
+.section.home .row > div {
+  height: 100%;
+}
+/* line 43, ../scss/partials/_home.scss */
+.section.home .row .strut {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+/* line 50, ../scss/partials/_home.scss */
+.section.home .row .chev {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  height: 200px;
+  line-height: 200px;
+}
+/* line 57, ../scss/partials/_home.scss */
+.section.home .row .chev:before {
+  font-family: "GothamBold";
+  color: #ff4848;
+  content: "\F101";
+  font-size: 4rem;
+}
+@media medium-up {
+  /* line 57, ../scss/partials/_home.scss */
+  .section.home .row .chev:before {
+    font-size: 6rem;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 57, ../scss/partials/_home.scss */
+  .section.home .row .chev:before {
+    font-size: 8rem;
+  }
+}
+@media only screen and (min-width: 90.063em) {
+  /* line 57, ../scss/partials/_home.scss */
+  .section.home .row .chev:before {
+    font-size: 11rem;
+  }
+}
+/* line 77, ../scss/partials/_home.scss */
+.section.home .row .nom {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  color: #ff4848;
+  font-family: "gillsans-bold";
+  padding-left: 10px;
+  font-size: 1.7rem;
+  line-height: 1.3rem;
+  text-transform: uppercase;
+}
+@media medium-up {
+  /* line 77, ../scss/partials/_home.scss */
+  .section.home .row .nom {
+    font-size: 3rem;
+    line-height: 2.3rem;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+  /* line 77, ../scss/partials/_home.scss */
+  .section.home .row .nom {
+    font-size: 4rem;
+    line-height: 3rem;
+  }
+}
+@media only screen and (min-width: 90.063em) {
+  /* line 77, ../scss/partials/_home.scss */
+  .section.home .row .nom {
+    font-size: 5.2rem;
+    line-height: 4rem;
+  }
+}
+
 /* line 3, ../scss/partials/_work.scss */
 .section.work {
   background: url('../img/work-bg_01.jpg?1418393023') no-repeat;
@@ -8759,6 +8882,18 @@ p {
   display: block;
 }
 /* line 119, ../scss/partials/_work.scss */
+.section.work .row-down {
+  margin-top: 50px;
+  -moz-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+}
+/* line 121, ../scss/partials/_work.scss */
+.section.work .row-down.active {
+  margin-top: 0px;
+}
+/* line 129, ../scss/partials/_work.scss */
 .section.work .volet {
   position: absolute;
   width: 100%;
@@ -8769,45 +8904,45 @@ p {
   /* <=IE8 */
   height: 0px;
 }
-/* line 131, ../scss/partials/_work.scss */
+/* line 141, ../scss/partials/_work.scss */
 .section.work .volet.volet-up .voletclose {
   top: 29px;
 }
-/* line 134, ../scss/partials/_work.scss */
+/* line 144, ../scss/partials/_work.scss */
 .section.work .volet.volet-up .cvtop {
   display: block;
 }
-/* line 137, ../scss/partials/_work.scss */
+/* line 147, ../scss/partials/_work.scss */
 .section.work .volet.volet-up .cvbtm {
   display: none;
 }
-/* line 142, ../scss/partials/_work.scss */
+/* line 152, ../scss/partials/_work.scss */
 .section.work .volet.volet-down .voletclose {
   top: 0px;
 }
-/* line 145, ../scss/partials/_work.scss */
+/* line 155, ../scss/partials/_work.scss */
 .section.work .volet.volet-down .cvtop {
   display: none;
 }
-/* line 148, ../scss/partials/_work.scss */
+/* line 158, ../scss/partials/_work.scss */
 .section.work .volet.volet-down .cvbtm {
   display: block;
 }
-/* line 154, ../scss/partials/_work.scss */
+/* line 164, ../scss/partials/_work.scss */
 .section.work .cvtop {
   width: 100%;
   height: 29px;
   position: absolute;
   top: 0px;
 }
-/* line 161, ../scss/partials/_work.scss */
+/* line 171, ../scss/partials/_work.scss */
 .section.work .cvbtm {
   width: 100%;
   height: 29px;
   position: absolute;
   bottom: 0px;
 }
-/* line 169, ../scss/partials/_work.scss */
+/* line 179, ../scss/partials/_work.scss */
 .section.work .voletclose {
   position: absolute;
   cursor: pointer;
@@ -8821,19 +8956,19 @@ p {
 }
 
 /* line 5, ../scss/partials/_studio.scss */
-.section.studio #studio-slide0 {
+.section.studio #studio-slide1 {
   background: url('../img/studio-bg_01.jpg?1418634704') no-repeat;
   background-position: center center;
   background-size: cover;
 }
 /* line 10, ../scss/partials/_studio.scss */
-.section.studio #studio-slide1 {
+.section.studio #studio-slide2 {
   background: url('../img/studio-bg_02.jpg?1418634721') no-repeat;
   background-position: center center;
   background-size: cover;
 }
 /* line 15, ../scss/partials/_studio.scss */
-.section.studio #studio-slide2 {
+.section.studio #studio-slide3 {
   background: url('../img/studio-bg_03.jpg?1418634759') no-repeat;
   background-position: center center;
   background-size: cover;
