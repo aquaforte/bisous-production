@@ -136,6 +136,9 @@
     filter: alpha(opacity=0); /* <=IE8 */
     height: 0px;
     
+    overflow: hidden;
+    
+    
     &.volet-up {
       
       .voletclose {

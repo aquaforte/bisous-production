@@ -10,8 +10,8 @@
     <script type="text/javascript" src="js/vendor/modernizr.js"></script>
   </head>
   <body>
-    <div class="container">
-      <header>
+    <div class="container" id="ip-container">
+      <header class="ip-header">
         <div class="row">
           <div class="small-5 columns text-right">
             <div class="logo"><a href="#home"><i class="icn icn-logo" title="Bisous"></i></a></div>
@@ -19,13 +19,19 @@
           <div class="small-7 columns">
             <div class="nav">
               <ul id="mainnav" class="inline-list">
-                <li data-menuanchor="work" class="active"><a href="#work">work<br /></a></li>
+                <li data-menuanchor="work"><a href="#work">work<br /></a></li>
                 <li data-menuanchor="studio"><a href="#studio">studio<br /></a></li>
                 <li data-menuanchor="contact"><a href="#contact">contact<br /></a></li>
               </ul> <!-- end #mainnav -->
             </div> <!-- end .nav -->
           </div> <!-- end .columns -->
         </div> <!-- end .row -->
+        <div class="ip-loader">
+            <svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
+                <path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+                <path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+            </svg>
+        </div>
       </header>
       
       <div class="content" id="fullpage">
@@ -382,6 +388,7 @@
     <script type="text/javascript" src="js/vendor/jquery.easings.js"></script>
     <script type="text/javascript" src="js/vendor/min/jquery.transit.min.js"></script>
     <script type="text/javascript" src="js/vendor/froogaloop.js"></script>
+    <script type="text/javascript" src="js/vendor/pathLoader.js"></script>
    
     <script type="text/javascript" src="js/app.js"></script>
   </body>
